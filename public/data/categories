@@ -1,0 +1,32 @@
+[
+    {
+        "_id": "676b31e8efb81060ba963466",
+        "category": "Creative",
+        "totalBlogs": 2
+    },
+    {
+        "_id": "676b37ceefb81060ba963467",
+        "category": "Lifestyle",
+        "totalBlogs": 3
+    },
+    {
+        "_id": "676b3f8aefb81060ba963468",
+        "category": "Travel",
+        "totalBlogs": 2
+    },
+    {
+        "_id": "676b4542efb81060ba963469",
+        "category": "Fashion",
+        "totalBlogs": 4
+    },
+    {
+        "_id": "676b48a3efb81060ba96346a",
+        "category": "Nature",
+        "totalBlogs": 3
+    },
+    {
+        "_id": "676b4b3befb81060ba96346b",
+        "category": "Personal Finance",
+        "totalBlogs": 2
+    }
+]

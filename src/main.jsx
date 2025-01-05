@@ -14,6 +14,7 @@ import PrivateRoute from "./components/AuthenticationComponent/PrivateRoute";
 import UpdateProfile from "./components/AuthenticationComponent/UpdateProfile";
 import ChangePassword from "./components/AuthenticationComponent/ChangePassword";
 import ForgotPassword from "./components/AuthenticationComponent/ForgotPassword";
+import AddBlog from "./components/AddBlogComponent/AddBlog";
 
 
 const router = createBrowserRouter([
@@ -23,6 +24,14 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
 
     children: [
+      {
+        path: "/add_blog",
+        element: (
+          <PrivateRoute>
+            <AddBlog />
+          </PrivateRoute>
+        ),
+      },
 
       // Authentication
       {
