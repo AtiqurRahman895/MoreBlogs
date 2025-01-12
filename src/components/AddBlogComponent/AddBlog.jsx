@@ -77,19 +77,15 @@ const AddBlog = () => {
     };
 
     axios
-      .post(
-        "https://ph-11-assignment-server.vercel.app/addBlog",
-        blogCredentials,
-        {
-          withCredentials: true,
-        }
-      )
+      .post("http://localhost:8080/addBlog", blogCredentials, {
+        withCredentials: true,
+      })
       .then(() => {
         e.target.reset();
         toast.success("You have successfully added a Blog!");
         const categoryCredentials = { category };
         return axios.put(
-          "https://ph-11-assignment-server.vercel.app/updateCategory",
+          "http://localhost:8080/updateCategory",
           categoryCredentials
         );
       })

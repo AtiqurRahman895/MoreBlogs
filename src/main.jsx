@@ -15,6 +15,7 @@ import UpdateProfile from "./components/AuthenticationComponent/UpdateProfile";
 import ChangePassword from "./components/AuthenticationComponent/ChangePassword";
 import ForgotPassword from "./components/AuthenticationComponent/ForgotPassword";
 import AddBlog from "./components/AddBlogComponent/AddBlog";
+import AllBlogs from "./components/AllBlogsComponent/AllBlogs";
 
 
 const router = createBrowserRouter([
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
             <AddBlog />
           </PrivateRoute>
         ),
+      },
+      {
+        path: "/all_blogs",
+        element: <AllBlogs />,
       },
 
       // Authentication

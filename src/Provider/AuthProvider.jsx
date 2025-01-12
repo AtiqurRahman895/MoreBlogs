@@ -78,13 +78,13 @@ const AuthProvider = ({ children }) => {
       setUser(currentUser);
       if (currentUser?.email) {
         const user = { email: currentUser.email };
-        axios.post("https://ph-11-assignment-server.vercel.app/jwt", user, {
+        axios.post("http://localhost:8080/jwt", user, {
           withCredentials: true,
-        })
+        });
       } else {
-        axios.get("https://ph-11-assignment-server.vercel.app/logout", {
+        axios.get("http://localhost:8080/logout", {
           withCredentials: true,
-        })
+        });
       }
       setLoading(false);
     });
