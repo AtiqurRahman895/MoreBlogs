@@ -19,6 +19,7 @@ import AllBlogs from "./components/AllBlogsComponent/AllBlogs";
 import Blog from "./components/BlogComponent/Blog";
 import ScrollProgress from "./components/BlogComponent/ScrollProgress";
 import axios from "axios";
+import Home from "./components/HomeComponent/Home";
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,12 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
 
     children: [
+      {
+        path: "/",
+        element: (
+          <Home />
+        ),
+      },
       {
         path: "/add_blog",
         element: (
