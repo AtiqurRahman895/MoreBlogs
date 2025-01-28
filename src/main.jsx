@@ -16,7 +16,9 @@ import ChangePassword from "./components/AuthenticationComponent/ChangePassword"
 import ForgotPassword from "./components/AuthenticationComponent/ForgotPassword";
 import AddBlog from "./components/AddBlogComponent/AddBlog";
 import AllBlogs from "./components/AllBlogsComponent/AllBlogs";
-
+import Blog from "./components/BlogComponent/Blog";
+import ScrollProgress from "./components/BlogComponent/ScrollProgress";
+import axios from "axios";
 
 const router = createBrowserRouter([
   {
@@ -36,6 +38,20 @@ const router = createBrowserRouter([
       {
         path: "/all_blogs",
         element: <AllBlogs />,
+      },
+      {
+        path: "/blog/:_id",
+        loader: async ({ params }) => {
+          const res = await axios.get(
+            `http://localhost:8080/blog/${params._id}`
+          );
+          return res.data;
+        },
+        element: (
+          <ScrollProgress>
+            <Blog />
+          </ScrollProgress>
+        ),
       },
 
       // Authentication

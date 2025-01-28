@@ -1,6 +1,5 @@
 [
     {
-        "_id": "676b3f89f7c47252e2b62e07",
         "image": "https://i.ibb.co.com/myGfZVS/blog3BG.jpg",
         "category": "Travel",
         "title": "The Art of Slow Travel: Exploring Destinations at Your Own Pace",
@@ -12,7 +11,6 @@
         "author_email": "emonhassan895@gmail.com"
     },
     {
-        "_id": "676b4542f7c47252e2b62e08",
         "image": "https://i.ibb.co.com/1qyd4qt/blog4BG.jpg",
         "category": "Fashion",
         "title": "Sustainable Fashion: How to Build an Eco-Friendly Wardrobe",
@@ -24,7 +22,6 @@
         "author_email": "ratul0alam@gmail.com"
     },
     {
-        "_id": "676b48a3f7c47252e2b62e09",
         "image": "https://i.ibb.co.com/tmJBPgp/blog5BG.jpg",
         "category": "Nature",
         "title": "The Healing Power of Nature: How Spending Time Outdoors Can Boost Your Mental Health",
@@ -36,7 +33,6 @@
         "author_email": "atiqemon98@gmail.com"
     },
     {
-        "_id": "676b4b3af7c47252e2b62e0a",
         "image": "https://i.ibb.co.com/4NQQ4V5/blog6BG.jpg",
         "category": "Personal Finance",
         "title": "Mastering Your Finances: Simple Steps to Take Control of Your Money",
@@ -48,7 +44,6 @@
         "author_email": "atiqemon98@gmail.com"
     },
     {
-        "_id": "676b5077f7c47252e2b62e0b",
         "image": "https://i.ibb.co.com/rxww8PR/blog2BG.jpg",
         "category": "Lifestyle",
         "title": "Designing a Balanced Life: Simple Habits for Long-Term Well-Being",
@@ -60,7 +55,6 @@
         "author_email": "ratul0alam@gmail.com"
     },
     {
-        "_id": "676b52aef7c47252e2b62e0c",
         "image": "https://i.ibb.co.com/xjDn8rZ/blog1BG.jpg",
         "category": "Creative",
         "title": "Unleashing Your Inner Artist: How to Stay Creative in a Busy World",
@@ -72,7 +66,6 @@
         "author_email": "emonhassan895@gmail.com"
     },
     {
-        "_id": "676f418d75e9699251ff2b58",
         "image": "https://i.ibb.co.com/bKXkXDB/blog7BG.jpg",
         "category": "Travel",
         "title": "Top 5 Destinations to Visit in 2025",
@@ -84,7 +77,6 @@
         "word_count": 572
     },
     {
-        "_id": "676f459fdd97e16e48f532de",
         "image": "https://i.ibb.co.com/Dzjs8qB/blog8BG.jpg",
         "category": "Creative",
         "title": "Ignite Your Creative Spark: Tips for Finding Inspiration Everywhere",
@@ -96,7 +88,6 @@
         "word_count": 655
     },
     {
-        "_id": "676f49512d49dd19873a0c04",
         "image": "https://i.ibb.co.com/7W7NtPT/blog9BG.jpg",
         "category": "Lifestyle",
         "title": "Living Your Best Life: Simple Ways to Improve Your Daily Routine",
@@ -108,7 +99,6 @@
         "word_count": 408
     },
     {
-        "_id": "676f4ac9d2081fad7f06c869",
         "image": "https://i.ibb.co.com/mv6DC4x/blog10BG.jpg",
         "category": "Nature",
         "title": "Reconnect with Nature: Simple Ways to Bring the Outdoors In",
@@ -120,7 +110,6 @@
         "word_count": 383
     },
     {
-        "_id": "676f4ca5497e11265865ad12",
         "image": "https://i.ibb.co.com/G21FKsG/blog11BG.jpg",
         "category": "Fashion",
         "title": "The Art of Dressing Well: Building a Stylish and Functional Wardrobe",
@@ -132,7 +121,6 @@
         "word_count": 1035
     },
     {
-        "_id": "676f4e9cd2081fad7f06c86a",
         "image": "https://i.ibb.co.com/GJMRN78/blog12BG.jpg",
         "category": "Personal Finance",
         "title": "Smart Saving: Simple Steps to Build Wealth",
@@ -144,7 +132,6 @@
         "word_count": 1012
     },
     {
-        "_id": "6772a38166e4e70ad934f87b",
         "image": "https://i.ibb.co.com/WDcFGHM/blog15BG.webp",
         "category": "Lifestyle",
         "title": "The Rise of Minimalism: How Simplifying Your Life Can Boost Your Happiness",
@@ -156,7 +143,6 @@
         "word_count": 858
     },
     {
-        "_id": "6772a548edc2548c263e71f4",
         "image": "https://i.ibb.co.com/LYNQBQr/blog13BG.jpg",
         "category": "Fashion",
         "title": "The Evolution of Streetwear: From Subculture to Global Phenomenon",
@@ -168,7 +154,6 @@
         "word_count": 709
     },
     {
-        "_id": "6772a698e8a94940df81dba4",
         "image": "https://i.ibb.co.com/sjBthqQ/blog14BG.jpg",
         "category": "Fashion",
         "title": "Sustainable Fashion: Redefining the Industry's Future",

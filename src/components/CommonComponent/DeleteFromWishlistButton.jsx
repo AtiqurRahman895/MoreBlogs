@@ -25,7 +25,7 @@ const DeleteFromWishlistButton = ({
           );
         })
         .catch(() => {
-          toast.error(`Faild to delete delete one blog from your wishlist`);
+          toast.error(`Failed to delete one blog from your wishlist`);
         })
         .finally(() => {
           setLoading(false);
