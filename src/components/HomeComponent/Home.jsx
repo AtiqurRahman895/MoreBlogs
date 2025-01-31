@@ -3,7 +3,7 @@ import HomeHeroSection from './HomeHeroSection';
 import TopBlogs from './TopBlogs';
 import RecentBlogsSection from './RecentBlogsSection';
 import AllCategoriesSection from './AllCategoriesSection';
-// import SubscribeSection from './SubscribeSection';
+import SubscribeSection from './SubscribeSection';
 
 const Home = () => {
     const headerTitle="MoreBlogs"
@@ -17,7 +17,7 @@ const Home = () => {
             <TopBlogs/>
             <RecentBlogsSection/>
             <AllCategoriesSection/>
-            {/* <SubscribeSection/>  */}
+            <SubscribeSection/> 
         </main>
     );
 };
