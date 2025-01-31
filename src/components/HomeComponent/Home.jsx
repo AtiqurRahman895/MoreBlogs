@@ -2,7 +2,7 @@ import { Helmet } from 'react-helmet-async';
 import HomeHeroSection from './HomeHeroSection';
 import TopBlogs from './TopBlogs';
 import RecentBlogsSection from './RecentBlogsSection';
-// import AllCategoriesSection from './AllCategoriesSection';
+import AllCategoriesSection from './AllCategoriesSection';
 // import SubscribeSection from './SubscribeSection';
 
 const Home = () => {
@@ -16,8 +16,8 @@ const Home = () => {
             <HomeHeroSection headerTitle={headerTitle} headerSubtext={headerSubtext}/>
             <TopBlogs/>
             <RecentBlogsSection/>
-            {/* <AllCategoriesSection/>
-            <SubscribeSection/>  */}
+            <AllCategoriesSection/>
+            {/* <SubscribeSection/>  */}
         </main>
     );
 };
