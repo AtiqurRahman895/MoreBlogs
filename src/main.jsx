@@ -20,6 +20,8 @@ import Blog from "./components/BlogComponent/Blog";
 import ScrollProgress from "./components/BlogComponent/ScrollProgress";
 import axios from "axios";
 import Home from "./components/HomeComponent/Home";
+import Featured from "./components/FeaturedComponent/Featured";
+
 
 const router = createBrowserRouter([
   {
@@ -59,6 +61,10 @@ const router = createBrowserRouter([
             <Blog />
           </ScrollProgress>
         ),
+      },
+      {
+        path: "/featured",
+        element: <Featured />,
       },
 
       // Authentication

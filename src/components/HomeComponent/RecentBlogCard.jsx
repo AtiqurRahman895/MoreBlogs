@@ -17,7 +17,7 @@ const RecentBlogCard = ({ blog }) => {
           {blog.title}
         </h4>
         <p className="mt-2 first-letter:text-custom-primary first-letter:text-3xl first-letter:font-Cinzel">
-          {blog.short_discription}...
+          {blog.short_description}...
         </p>
         <div className="mt-4 flex items-center justify-center gap-1">
           <p className="text-custom-primary">{blog.author}</p>
@@ -25,12 +25,15 @@ const RecentBlogCard = ({ blog }) => {
         </div>
         <div className="mt-4 flex items-center justify-center gap-3">
           <ReadThisBlogButton
-            _id={blog._id} 
+            _id={blog._id}
             buttonClass={"p-1.5"}
             iconClass={"text-lg"}
           />
           <AddToWishlistButton
-            _id={blog._id} image={blog.image} title={blog.title} category={blog.category}
+            _id={blog._id}
+            image={blog.image}
+            title={blog.title}
+            category={blog.category}
             buttonClass={"p-1.5"}
             iconClass={"text-lg"}
           />

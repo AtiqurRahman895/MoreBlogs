@@ -52,7 +52,7 @@ const AllCategoriesSection = () => {
     axios
       .get("http://localhost:8080/categories", { params })
       .then((res) => {
-        // console.log(res.data)
+        console.log(res.data)
         res.data.length === 0 ? setNotFound(true) : setCategories(res.data);
       })
       .catch((error) => {

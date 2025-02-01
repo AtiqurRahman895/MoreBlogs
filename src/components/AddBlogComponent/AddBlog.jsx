@@ -5,8 +5,8 @@ import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import ImageInputSection from "./ImageInputSection";
-import ShortDiscriptionSection from "./ShortDiscriptionSection";
-import LongDiscriptionSection from "./LongDiscriptionSection";
+import ShortDescriptionSection from "./ShortDescriptionSection";
+import LongDescriptionSection from "./LongDescriptionSection";
 import CategoryInputSection from "./CategoryInputSection";
 import TitleInputSection from "./TitleInputSection";
 
@@ -15,7 +15,7 @@ const AddBlog = () => {
   const { user, logoutUser } = useContext(AuthContext);
 
   const [image, setImage] = useState();
-  const [goodImage, setGoodImage] = useState(false);
+  // const [goodImage, setGoodImage] = useState(false);
 
   const [category, setCategory] = useState("");
   const [title, setTitle] = useState("");
@@ -27,14 +27,14 @@ const AddBlog = () => {
     year: "numeric",
   });
 
-  const [short_discription, setShort_discription] = useState("");
+  const [short_description, setShort_description] = useState("");
 
-  const [long_discription, setLong_discription] = useState("");
-  const [good_long_discription, setGood_long_discription] = useState(false);
+  const [long_description, setLong_description] = useState("");
+  const [good_long_description, setGood_long_description] = useState(false);
   const [word_count, setWord_count] = useState(0);
 
   const handleSubmit = (e) => {
-    const short_discription_word_count = short_discription
+    const short_description_word_count = short_description
       .replace(/<[^>]*>/g, " ")
       .trim()
       .split(/\s+/).length;
@@ -47,22 +47,24 @@ const AddBlog = () => {
       );
       navigate("/login");
       return;
-    } else if (short_discription_word_count < 10) {
+    } else if (short_description_word_count < 10) {
       toast.warning(
-        `Please lenghten Short Discription to 10 or more word! (Currently has ${short_discription_word_count} words)`
+        `Please lenghten Short Description to 10 or more word! (Currently has ${short_description_word_count} words)`
       );
       return;
     } else if (word_count < 20) {
       toast.warning(
-        `Please lenghten Long Discription to 20 or more word! (Currently has ${word_count} words)`
+        `Please lenghten Long Description to 20 or more word! (Currently has ${word_count} words)`
       );
       return;
-    } else if (goodImage == false) {
-      toast.warning("Invalid image URL. Please provide a valid image!");
+    } else if (!image) {
+      toast.warning(
+        "You must upload a image. Only JPG, PNG, GIF image files are allowed, and the maximum file size is 10MB. Please select an appropriate image file to proceed!"
+      );
       return;
     }
 
-    // console.log(image,category,title,author,author_email,published,short_discription,long_discription,word_count)
+    // console.log(image,category,title,author,author_email,published,short_description,long_description,word_count)
 
     const blogCredentials = {
       image,
@@ -71,8 +73,8 @@ const AddBlog = () => {
       author,
       author_email,
       published,
-      short_discription,
-      long_discription: good_long_discription,
+      short_description,
+      long_description: good_long_description,
       word_count,
     };
 
@@ -109,12 +111,7 @@ const AddBlog = () => {
         <title>Add Blog | MORE BLOGS</title>
       </Helmet>
       <form onSubmit={handleSubmit} className="mb-6 space-y-8">
-        <ImageInputSection
-          image={image}
-          setImage={setImage}
-          goodImage={goodImage}
-          setGoodImage={setGoodImage}
-        />
+        <ImageInputSection image={image} setImage={setImage} />
 
         <section className="">
           <div className="container grid justify-items-center ">
@@ -132,16 +129,16 @@ const AddBlog = () => {
           </div>
         </section>
 
-        <ShortDiscriptionSection
-          short_discription={short_discription}
-          setShort_discription={setShort_discription}
+        <ShortDescriptionSection
+          short_description={short_description}
+          setShort_description={setShort_description}
         />
 
-        <LongDiscriptionSection
-          long_discription={long_discription}
-          setLong_discription={setLong_discription}
-          good_long_discription={good_long_discription}
-          setGood_long_discription={setGood_long_discription}
+        <LongDescriptionSection
+          long_description={long_description}
+          setLong_description={setLong_description}
+          good_long_description={good_long_description}
+          setGood_long_description={setGood_long_description}
           word_count={word_count}
           setWord_count={setWord_count}
         />

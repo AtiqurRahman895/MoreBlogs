@@ -7,8 +7,6 @@ import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import Loading from "../AuthenticationComponent/Loading";
 
-
-
 const Blog = () => {
   const blogInfo = useLoaderData();
   const { user } = useContext(AuthContext);
@@ -20,8 +18,8 @@ const Blog = () => {
     author,
     author_email,
     published,
-    short_discription,
-    long_discription,
+    short_description,
+    long_description,
   } = blogInfo && blogInfo;
 
   return (
@@ -62,7 +60,10 @@ const Blog = () => {
                   />
                 )}
                 <AddToWishlistButton
-                  _id={_id} image={image} title={title} category={category}
+                  _id={_id}
+                  image={image}
+                  title={title}
+                  category={category}
                   buttonClass={"p-1.5"}
                   iconClass={"text-lg"}
                 />
@@ -73,7 +74,7 @@ const Blog = () => {
           <section className="">
             <div className="container">
               <p className="mt-2 font-bold first-letter:text-custom-primary first-letter:text-3xl first-letter:font-Cinzel">
-                {short_discription}
+                {short_description}
               </p>
             </div>
           </section>
@@ -81,7 +82,7 @@ const Blog = () => {
           <section className="">
             <div
               className="!whitespace-pre-wrap container itsLongDispriction"
-              dangerouslySetInnerHTML={{ __html: long_discription }}
+              dangerouslySetInnerHTML={{ __html: long_description }}
             ></div>
           </section>
 
