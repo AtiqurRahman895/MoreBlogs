@@ -8,8 +8,8 @@ const ImageInputSection = ({image,setImage}) => {
         hostImage(file,setImage)
     }
     return (
-        <header className="">
-            <div className={`container relative ${image?"aspect-auto":"bg-custom-primary aspect-[4/2.5] sm:aspect-[4/1.5]"}`}>
+        <section className="">
+            <div className={`container overflow-x-hidden relative ${image?"aspect-auto":"bg-custom-primary aspect-[4/2.5] sm:aspect-[4/1.5]"}`}>
                 <img src={image?image:""} alt="" className="bg-custom-primary max-w-full m-auto" />
 
                 {/* Image */}
@@ -28,7 +28,7 @@ const ImageInputSection = ({image,setImage}) => {
                 </div>
 
             </div>
-        </header>
+        </section>
     );
 };
 
