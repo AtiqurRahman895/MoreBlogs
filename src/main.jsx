@@ -22,7 +22,7 @@ import ScrollProgress from "./components/BlogComponent/ScrollProgress";
 import axios from "axios";
 import Home from "./components/HomeComponent/Home";
 import Featured from "./components/FeaturedComponent/Featured";
-
+import Wishlist from "./components/WishListComponent/Wishlist";
 
 const router = createBrowserRouter([
   {
@@ -74,6 +74,14 @@ const router = createBrowserRouter([
         element: (
           <PrivateRoute>
             <UpdateBlog />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/wishlist",
+        element: (
+          <PrivateRoute>
+            <Wishlist />
           </PrivateRoute>
         ),
       },
