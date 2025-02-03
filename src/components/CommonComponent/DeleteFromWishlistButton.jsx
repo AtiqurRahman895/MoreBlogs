@@ -18,7 +18,7 @@ const DeleteFromWishlistButton = ({
     if (deleteGame) {
       setLoading(true);
       axios
-        .delete(`http://localhost:8080/deleteWishlist/${_id}`)
+        .delete(`https://more-blogs-server.vercel.app/deleteWishlist/${_id}`)
         .then(() => {
           toast.info(
             `You have successfully deleted one blog from your wishlist`

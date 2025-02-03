@@ -22,7 +22,7 @@ const BlogsSection = () => {
     setLoading(true);
 
     axios
-      .get("http://localhost:8080/blogs", { params })
+      .get("https://more-blogs-server.vercel.app/blogs", { params })
       .then((res) => {
         if (res.data.length === 0) {
           setNotFound(true);

@@ -34,7 +34,7 @@ const Wishlist = () => {
   useEffect(() => {
     const params = { query: { user_email: user.email }, sort: { _id: -1 } };
     axios
-      .get("http://localhost:8080/wishlist", {
+      .get("https://more-blogs-server.vercel.app/wishlist", {
         params,
         withCredentials: true,
       })

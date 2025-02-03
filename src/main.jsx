@@ -33,9 +33,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: (
-          <Home />
-        ),
+        element: <Home />,
       },
       {
         path: "/add_blog",
@@ -53,7 +51,7 @@ const router = createBrowserRouter([
         path: "/blog/:_id",
         loader: async ({ params }) => {
           const res = await axios.get(
-            `http://localhost:8080/blog/${params._id}`
+            `https://more-blogs-server.vercel.app/blog/${params._id}`
           );
           return res.data;
         },
@@ -67,7 +65,7 @@ const router = createBrowserRouter([
         path: "/update_blog/:_id",
         loader: async ({ params }) => {
           const res = await axios.get(
-            `http://localhost:8080/blog/${params._id}`
+            `https://more-blogs-server.vercel.app/blog/${params._id}`
           );
           return res.data;
         },

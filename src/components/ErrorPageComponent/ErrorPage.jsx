@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet-async';
 
 const ErrorPage = () => {
     const { error, status, statusText } = useRouteError();
-    console.log(error);
+    // console.log(error);
 
     return (
         <>

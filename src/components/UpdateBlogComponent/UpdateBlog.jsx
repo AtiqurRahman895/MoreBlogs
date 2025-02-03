@@ -97,18 +97,14 @@ const UpdateBlog = () => {
     };
 
     axios
-      .put(
-        "http://localhost:8080/updateBlog",
-        blogCredentials,
-        {
-          withCredentials: true,
-        }
-      )
+      .put("https://more-blogs-server.vercel.app/updateBlog", blogCredentials, {
+        withCredentials: true,
+      })
       .then(() => {
         e.target.reset();
         toast.success("You have successfully updated this Blog!");
         //   const categoryCredentials = { category };
-        // return axios.put("http://localhost:8080/updateCategory");
+        // return axios.put("https://more-blogs-server.vercel.app/updateCategory");
       })
       .catch((error) => {
         if (error.status === 401 || error.status === 403) {
@@ -132,10 +128,7 @@ const UpdateBlog = () => {
         <Loading />
       ) : (
         <form onSubmit={handleSubmit} className="mb-6 space-y-8">
-          <ImageInputSection
-            image={image}
-            setImage={setImage}
-          />
+          <ImageInputSection image={image} setImage={setImage} />
 
           <section className="">
             <div className="container grid justify-items-center ">

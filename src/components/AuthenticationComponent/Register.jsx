@@ -4,6 +4,8 @@ import { toast } from "react-toastify";
 import { Link, useNavigate } from "react-router-dom";
 import { IoIosEye, IoIosEyeOff } from "react-icons/io";
 import googleSVG from "../../assets/google.svg";
+import useHostImage from "../../Hooks/useHostImage";
+import { FaRegUserCircle } from "react-icons/fa";
 
 const Register = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -12,7 +14,14 @@ const Register = () => {
   const [password, setPassword] = useState();
   const [passwordError, setPasswordError] = useState(false);
   const navigate = useNavigate();
+  const [image, setImage] = useState();
 
+  const hostImage=useHostImage()
+
+  const handleImageChange=(e)=>{
+      const file=e.target.files[0]
+      hostImage(file,setImage)
+  }
   const handleGoogleLoginBtn = () => {
     loginWithGoogle()
       .then((userCredential) => {
@@ -43,12 +52,17 @@ const Register = () => {
   const CreatUserOnSubmit = (e) => {
     e.preventDefault();
     const name = e.target.name.value;
-    const photoURL = e.target.photoURL.value;
+    const photoURL = image;
     const email = e.target.email.value;
     const password = e.target.password.value;
 
     if (passwordError) {
       e.target.password.focus();
+      return;
+    }else if (!photoURL) {
+      toast.warning(
+        "You must upload a profile image. Only JPG, PNG, GIF image files are allowed, and the maximum file size is 10MB. Please select an appropriate image file to proceed!"
+      );
       return;
     }
 
@@ -89,25 +103,23 @@ const Register = () => {
               />
             </div>
 
-            <div className="form-control">
-              <label htmlFor="photoURL" className="label">
-                <span className="">Photo url</span>
-              </label>
-              <input
-                type="url"
-                name="photoURL"
-                id="photoURL"
-                className="input input-ghost input-bordered"
-                required
-              />
-            </div>
-
-            {/* <label htmlFor="pic" className="form-control">
-                            <div className="label">
-                                <span className="">profile picture</span>
-                            </div>
-                            <input type="file" name="pic" id="pic" className="file-input file-input-bordered" />
-                        </label> */}
+            <div className="form-control flex flex-col items-center mt-3">
+                  <label htmlFor="image" className="label relative flex flex-col text-center w-fit">
+                      <div className="">
+                          {image?
+                              <div className="bg-white max-w-12 xs:max-w-20 aspect-square rounded-full overflow-hidden">
+                                  <img src={image?image:""} alt="" className="" />
+                              </div>
+                              :
+                              <FaRegUserCircle className={`text-5xl xs:text-7xl`} />
+                          }
+                          
+                          <input id="image" name="image" type="file" accept="image/*" onChange={handleImageChange} className="file-input absolute opacity-0 scale-0"/>
+                      </div>
+                      <span className="">{image?"1 Image File Chosen":"Choose your Photo"}</span>
+                  </label>
+                  
+              </div>
 
             <div className="form-control">
               <label htmlFor="email" className="label">

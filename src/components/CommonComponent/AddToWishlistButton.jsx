@@ -27,7 +27,7 @@ const AddToWishlistButton = ({
     const params = { query: { blog_id: _id, user_email: user.email } };
 
     axios
-      .get("http://localhost:8080/Wishlist", {
+      .get("https://more-blogs-server.vercel.app/Wishlist", {
         params,
         withCredentials: true,
       })
@@ -44,7 +44,7 @@ const AddToWishlistButton = ({
           user_email: user.email,
         };
         return axios.post(
-          "http://localhost:8080/addToWishlist",
+          "https://more-blogs-server.vercel.app/addToWishlist",
           wishlistCredentials
         );
       })

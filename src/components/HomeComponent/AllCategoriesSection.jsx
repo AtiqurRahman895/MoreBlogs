@@ -50,9 +50,8 @@ const AllCategoriesSection = () => {
     const params = { sort: { totalBlogs: -1 } };
     setLoading(true);
     axios
-      .get("http://localhost:8080/categories", { params })
+      .get("https://more-blogs-server.vercel.app/categories", { params })
       .then((res) => {
-        console.log(res.data)
         res.data.length === 0 ? setNotFound(true) : setCategories(res.data);
       })
       .catch((error) => {

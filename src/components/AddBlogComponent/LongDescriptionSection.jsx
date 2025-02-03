@@ -30,7 +30,6 @@ const LongDescriptionSection = ({
 
   const handleLongDiscroptionChange = (value) => {
     setLong_description(value);
-    console.log(value);
 
     const sanitizedHtml = DOMPurify.sanitize(value, {
       KEEP_CONTENT: true,

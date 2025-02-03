@@ -15,7 +15,7 @@ const BlogCommentSection = ({ blog_id, author_email, user }) => {
     // setLoading(true);
     // console.log("its loading!");
     axios
-      .get("http://localhost:8080/comments", { params })
+      .get("https://more-blogs-server.vercel.app/comments", { params })
       .then((res) => {
         // console.log(res.data)
         if (res.data.length === 0) {
@@ -60,7 +60,10 @@ const BlogCommentSection = ({ blog_id, author_email, user }) => {
 
     setLoading(true);
     axios
-      .post("http://localhost:8080/addComment", commentCredentials)
+      .post(
+        "https://more-blogs-server.vercel.app/addComment",
+        commentCredentials
+      )
       .then(() => {
         e.target.reset();
         toast.success("You have successfully added a Comment on this blog!");

@@ -73,7 +73,7 @@ const Header = () => {
             <div className="flex items-center gap-2">
               <div className="dropdown dropdown-end dropdown-hover">
                 <div tabIndex={0} role="button" className="indicator rounded-full hover:shadow-xl mx-4 avatar">
-                  <div className="w-10 rounded-full">
+                  <div className="bg-white max-w-10 aspect-square rounded-full overflow-hidden">
                     <img
                       alt="User Photo"
                       src={user.photoURL?`${user.photoURL}`:"https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"} />

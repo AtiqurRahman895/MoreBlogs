@@ -78,11 +78,11 @@ const AuthProvider = ({ children }) => {
       setUser(currentUser);
       if (currentUser?.email) {
         const user = { email: currentUser.email };
-        axios.post("http://localhost:8080/jwt", user, {
+        axios.post("https://more-blogs-server.vercel.app/jwt", user, {
           withCredentials: true,
         });
       } else {
-        axios.get("http://localhost:8080/logout", {
+        axios.get("https://more-blogs-server.vercel.app/logout", {
           withCredentials: true,
         });
       }

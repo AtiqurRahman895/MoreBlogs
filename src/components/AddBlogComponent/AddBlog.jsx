@@ -79,7 +79,7 @@ const AddBlog = () => {
     };
 
     axios
-      .post("http://localhost:8080/addBlog", blogCredentials, {
+      .post("https://more-blogs-server.vercel.app/addBlog", blogCredentials, {
         withCredentials: true,
       })
       .then(() => {
@@ -87,7 +87,7 @@ const AddBlog = () => {
         toast.success("You have successfully added a Blog!");
         const categoryCredentials = { category };
         return axios.put(
-          "http://localhost:8080/updateCategory",
+          "https://more-blogs-server.vercel.app/updateCategory",
           categoryCredentials
         );
       })

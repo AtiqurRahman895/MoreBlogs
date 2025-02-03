@@ -23,7 +23,7 @@ const Featured = () => {
     const params = { limit: 10, sort: { word_count: sort ? 1 : -1 } };
 
     axios
-      .get("http://localhost:8080/blogs", { params })
+      .get("https://more-blogs-server.vercel.app/blogs", { params })
       .then((res) => {
         // console.log(res.data)
         res.data.length === 0 ? setNotFound(true) : setTopBlogs(res.data);

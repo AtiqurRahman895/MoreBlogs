@@ -24,7 +24,7 @@ const useHostImage = () => {
         .catch((err)=>{
             setImage(false)
             // setGoodImage(false)
-            console.log(err.message)
+            console.error(err.message)
             toast.error("Only JPG, PNG, GIF image files are allowed, and the maximum file size is 10MB. Please select an appropriate image file to proceed!")
         })
     }
