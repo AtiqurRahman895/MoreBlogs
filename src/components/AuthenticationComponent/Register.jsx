@@ -118,7 +118,6 @@ const Register = () => {
                       </div>
                       <span className="">{image?"1 Image File Chosen":"Choose your Photo"}</span>
                   </label>
-                  
               </div>
 
             <div className="form-control">
