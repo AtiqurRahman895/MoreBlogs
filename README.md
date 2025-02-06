@@ -2,6 +2,7 @@
 
 A modern blogging platform where users can create, update, and explore various blog posts with enhanced UI/UX and dynamic features.
 
+![MoreBlogs Screenshot](https://i.ibb.co.com/MzSJ9GC/project-Image3.jpg) 
 
 ## 🚀 Live Project  
 🔗 [MoreBlogs Live](https://more-blogs-atiq.web.app)  
