@@ -45,7 +45,7 @@ const TopScrollBar = ({ blogCount }) => {
            focus:border-custom-primary input-bordered" required />
         </div> */}
 
-        <label className="input input-ghost !text-custom-primary rounded-sm outline-none focus:!outline-none border-custom-primary 
+        <label className="input input-ghost !text-custom-primary rounded-none outline-none focus:!outline-none border-custom-primary 
            focus:border-custom-primary input-bordered flex items-center gap-2">
           <input type="search" name='searchInput' id='searchInput' placeholder="Search..."/>
           <svg

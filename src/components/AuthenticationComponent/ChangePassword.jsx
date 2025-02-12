@@ -66,7 +66,7 @@ const ChangePassword = () => {
                 type="email"
                 name="email"
                 id="email"
-                className="input input-ghost input-bordered disabled:border  disabled:border-gray-300"
+                className="input input-bordered border-white input-ghost disabled:border  disabled:border-gray-300"
                 value={user.email}
                 disabled
               />
@@ -95,7 +95,7 @@ const ChangePassword = () => {
                 type={showPassword ? "text" : "password"}
                 name="password"
                 id="password"
-                className="input input-ghost input-bordered"
+                className="input input-bordered border-white input-ghost"
                 value={password}
                 required
               />

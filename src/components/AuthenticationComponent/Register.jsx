@@ -97,7 +97,7 @@ const Register = () => {
                 type="text"
                 name="name"
                 id="name"
-                className="input input-ghost input-bordered"
+                className="input input-bordered border-white input-ghost"
                 minLength={3}
                 required
               />
@@ -128,7 +128,7 @@ const Register = () => {
                 type="email"
                 name="email"
                 id="email"
-                className="input input-ghost input-bordered"
+                className="input input-bordered border-white input-ghost"
                 required
               />
             </div>
@@ -143,7 +143,7 @@ const Register = () => {
                 type={showPassword ? "text" : "password"}
                 name="password"
                 id="password"
-                className="input input-ghost input-bordered"
+                className="input input-bordered border-white input-ghost"
                 value={password}
                 required
               />
@@ -162,7 +162,7 @@ const Register = () => {
 
               {passwordError && (
                 <label htmlFor="password" className="label">
-                  <p className="-alt text-red-500">
+                  <p className="-alt text-red-600">
                     Password must Be 6 to 20 characters long, Include at least
                     one digit (0-9), one lowercase letter (a-z), one uppercase
                     letter (A-Z) and one special character (@#$%^&*!)
@@ -179,7 +179,7 @@ const Register = () => {
               Already have an account?{" "}
               <Link
                 to={"/login"}
-                className="link link-hover text-custom-primary hover:font-bold "
+                className="link link-hover text-white hover:font-bold "
               >
                 {" "}
                 <b>Login now</b>{" "}
@@ -187,10 +187,10 @@ const Register = () => {
             </span>
           </form>
 
-          <h3 className="text-center text-custom-half-primary">or</h3>
+          <h3 className="text-center text-white">or</h3>
           <button
             onClick={handleGoogleLoginBtn}
-            className="btn btn-ghost border text-white rounded-none"
+            className="btn btn-ghost rounded-none"
           >
             <img src={googleSVG} alt="" className="w-[1rem]" /> Login with
             Google

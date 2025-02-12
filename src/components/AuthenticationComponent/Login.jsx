@@ -66,7 +66,7 @@ const Login = () => {
                 type="email"
                 name="email"
                 id="email"
-                className="input input-ghost input-bordered"
+                className="input input-ghost input-bordered border-white"
                 value={email}
                 required
               />
@@ -80,7 +80,7 @@ const Login = () => {
                 type={showPassword ? "text" : "password"}
                 name="password"
                 id="password"
-                className="input input-ghost input-bordered"
+                className="input input-ghost input-bordered border-white"
                 required
               />
               <button
@@ -112,7 +112,7 @@ const Login = () => {
               Do not have an account?{" "}
               <Link
                 to={"/register"}
-                className="link link-hover text-custom-primary hover:font-bold "
+                className="link link-hover text-white hover:font-bold "
               >
                 {" "}
                 <b>Register now</b>{" "}
@@ -120,10 +120,10 @@ const Login = () => {
             </span>
           </form>
 
-          <h3 className="text-center text-custom-half-primary">or</h3>
+          <h3 className="text-center text-white">or</h3>
           <button
             onClick={handleGoogleLoginBtn}
-            className="btn btn-ghost border text-white rounded-none"
+            className="btn btn-ghost rounded-none"
           >
             <img src={googleSVG} alt="" className="w-[1rem]" />
             Login with Google

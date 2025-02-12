@@ -7,9 +7,11 @@ import { MdRateReview } from "react-icons/md";
 import { NavLink } from "react-router-dom";
 import { GiQueenCrown } from "react-icons/gi";
 import { BsDatabaseFillCheck } from "react-icons/bs";
+import { useContext } from "react";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 const NavMenus = () => {
-
+  const {user}=useContext(AuthContext)
   return (
     <>
       <li className="w-fit">
@@ -19,22 +21,28 @@ const NavMenus = () => {
       <li className="w-fit">
         <NavLink to={"/all_blogs"} className="hover:bg-transparent flex items-center gap-1 pb-1 mb-1"><IoNewspaper />All blogs</NavLink>
       </li>
-      
-      <li className="w-fit">
-        <NavLink to={"/add_blog"} className="hover:bg-transparent flex items-center gap-1 pb-1 mb-1"><MdRateReview />Add Blog</NavLink>
-      </li>
-
-      <li className="w-fit">
-        <NavLink to={"/wishlist"} className="hover:bg-transparent flex items-center gap-1 pb-1 mb-1"><FaHeart />My Wishlist</NavLink>
-      </li>
 
       <li className="w-fit">
         <NavLink to={"/featured"} className="hover:bg-transparent flex items-center gap-1 pb-1 mb-1"><GiQueenCrown />Featured</NavLink>
       </li>
 
-      <li className="w-fit">
-        <NavLink to={"/my_blogs"} className="hover:bg-transparent flex items-center gap-1 pb-1 mb-1"><BsDatabaseFillCheck />My Blogs</NavLink>
-      </li>      
+      {
+        (user) && 
+          <>
+            <li className="w-fit">
+              <NavLink to={"/add_blog"} className="hover:bg-transparent flex items-center gap-1 pb-1 mb-1"><MdRateReview />Add Blog</NavLink>
+            </li>
+
+            <li className="w-fit">
+              <NavLink to={"/wishlist"} className="hover:bg-transparent flex items-center gap-1 pb-1 mb-1"><FaHeart />My Wishlist</NavLink>
+            </li>
+
+            <li className="w-fit">
+              <NavLink to={"/my_blogs"} className="hover:bg-transparent flex items-center gap-1 pb-1 mb-1"><BsDatabaseFillCheck />My Blogs</NavLink>
+            </li>  
+          </>
+        
+      }    
 
     </>
   );

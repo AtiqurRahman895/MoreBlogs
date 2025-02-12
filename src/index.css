@@ -110,11 +110,11 @@
     @apply bg-white duration-500 hover:bg-custom-primary btn join-item border border-gray-300 hover:border-gray-300 text-inherit
   }
   .formSubmitBtn{
-    @apply btn bg-custom-primary hover:bg-white text-white hover:text-black btn-block rounded-none
+    @apply btn text-white btn-block rounded-none
   }
 
   .fromWrapper{
-    @apply card w-full shrink-0 bg-black text-white shadow-xl p-4 md:p-8 my-20 space-y-4
+    @apply card w-full shrink-0 bg-custom-primary text-black shadow-xl p-4 md:p-8 my-20 space-y-4
   }
 
   .MyReviewTable thead tr, .MyReviewTable tfoot tr, .MyReviewTable th{
@@ -230,7 +230,7 @@
 
 }
 .invalid{
-  @apply border focus:border-rose-300
+  @apply border focus:border-red-600
 }
 
 /* ADD BLOG  */

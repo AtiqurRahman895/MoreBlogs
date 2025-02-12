@@ -63,7 +63,7 @@ const Header = () => {
 
           </div>
           <div className="navbar-center hidden lg:inline-block">
-            <ul className="menu menu-horizontal px-1 grid lg:grid-flow-col-dense lg:grid-rows-2 xl:grid-rows-1 items-center justify-items-center !list-none !space-y-0 !m-0">
+            <ul className={`menu menu-horizontal px-1 grid lg:grid-flow-col-dense ${user&&"lg:grid-rows-2"} xl:grid-rows-1 items-center justify-items-center !list-none gap-x-2 !space-y-0 !m-0`}>
               <NavMenus/>
             </ul>
           </div>
