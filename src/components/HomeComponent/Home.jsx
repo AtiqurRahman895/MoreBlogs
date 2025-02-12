@@ -4,6 +4,7 @@ import TopBlogs from './TopBlogs';
 import RecentBlogsSection from './RecentBlogsSection';
 import AllCategoriesSection from './AllCategoriesSection';
 import SubscribeSection from './SubscribeSection';
+import WhyUsSection from './WhyUsSection';
 
 const Home = () => {
     const headerTitle="MoreBlogs"
@@ -15,6 +16,7 @@ const Home = () => {
             </Helmet>
             <HomeHeroSection headerTitle={headerTitle} headerSubtext={headerSubtext}/>
             <TopBlogs/>
+            <WhyUsSection/>
             <RecentBlogsSection/>
             <AllCategoriesSection/>
             <SubscribeSection/> 

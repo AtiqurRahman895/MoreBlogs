@@ -4,10 +4,11 @@ import { ReactSVG } from "react-svg";
 import Loading from "../AuthenticationComponent/Loading";
 import { TransferLists } from "../../Contexts/TransferLists";
 import { useNavigate } from "react-router-dom";
+import UseUrlQuery from "../../Hooks/UseUrlQuery";
 
 const AllCategoriesSection = () => {
   const navigate = useNavigate();
-  const { setSearchQuery } = useContext(TransferLists);
+  const { searchQuery } = UseUrlQuery()
 
   const [loading, setLoading] = useState(true);
   const [notFound, setNotFound] = useState(false);
@@ -63,8 +64,7 @@ const AllCategoriesSection = () => {
   }, []);
 
   const handleCategoryButton = (category) => {
-    setSearchQuery(category);
-    navigate("/all_blogs");
+    navigate(`/all_blogs?searchQuery=${category}`);
   };
 
   return (
