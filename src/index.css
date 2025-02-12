@@ -73,9 +73,9 @@
   textarea {
     @apply ;
   } */
-  /* input,textarea {
-    @apply focus:invalid:border focus:invalid:border-rose-300 focus:valid:border focus:valid:border-custom-primary;
-  } */
+  input,textarea {
+    @apply !rounded-none
+  }
 
 }
 @layer utilities {
@@ -110,7 +110,7 @@
     @apply bg-white duration-500 hover:bg-custom-primary btn join-item border border-gray-300 hover:border-gray-300 text-inherit
   }
   .formSubmitBtn{
-    @apply btn bg-custom-primary hover:bg-white text-white hover:text-black btn-block
+    @apply btn bg-custom-primary hover:bg-white text-white hover:text-black btn-block rounded-none
   }
 
   .fromWrapper{

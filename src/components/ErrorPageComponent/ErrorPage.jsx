@@ -35,7 +35,7 @@ const ErrorPage = () => {
 
                 <Link
                     to={-1}
-                    className="btn bg-custom-primary hover:bg-custom-half-primary border-none font-bold text-white hover:text-custom-primary"
+                    className="btn rounded-none bg-custom-primary hover:bg-custom-half-primary border-none font-bold text-white hover:text-custom-primary"
                 >
                     Go Back
                 </Link>

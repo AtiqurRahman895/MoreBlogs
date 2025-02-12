@@ -81,7 +81,7 @@ const SubscribeSection = () => {
                         </div>
 
                         <div className="text-center">
-                           <button className="btn w-[50%] bg-custom-primary border border-custom-primary hover:bg-white text-white hover:text-custom-primary ">Subscribe</button>
+                           <button className="btn rounded-none w-[50%] bg-custom-primary border border-custom-primary hover:bg-white text-white hover:text-custom-primary ">Subscribe</button>
                         </div>
                 
                     </form>

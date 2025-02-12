@@ -123,7 +123,7 @@ const Login = () => {
           <h3 className="text-center text-custom-half-primary">or</h3>
           <button
             onClick={handleGoogleLoginBtn}
-            className="btn btn-ghost border text-white"
+            className="btn btn-ghost border text-white rounded-none"
           >
             <img src={googleSVG} alt="" className="w-[1rem]" />
             Login with Google
