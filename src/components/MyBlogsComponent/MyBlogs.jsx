@@ -5,13 +5,9 @@ import axios from "axios";
 import Loading from "../AuthenticationComponent/Loading";
 import TopBlogCard from "../HomeComponent/TopBlogCard";
 import { AuthContext } from "../../Provider/AuthProvider";
-import { useNavigate } from "react-router-dom";
-import { toast } from "react-toastify";
 
 const MyBlogs = () => {
-  const navigate = useNavigate();
-
-  const { user, logoutUser } = useContext(AuthContext);
+  const { user } = useContext(AuthContext);
   const [loading, setLoading] = useState(true);
   const [notFound, setNotFound] = useState(false);
   const [blogs, setBlogs] = useState([]);
@@ -19,20 +15,9 @@ const MyBlogs = () => {
   const headerTitle = "Your Blogs";
   const headerSubtext = "All the blogs you added in one place";
 
-  //   useEffect(() => {
-  //     if (user) {
-  //       if (user.email !== blogInfo.author_email) {
-  //         toast.error("You are not authorized to update this blog.");
-  //         navigate("/");
-  //       }
-  //     } else {
-  //       return;
-  //     }
-  //     setLoading(false);
-  //   }, [user, blogInfo, navigate]);
 
   useEffect(() => {
-    const params = { author_email: user.email, sort: { _id: -1 } };
+    const params = { query: {author_email: user.email}, sort: { _id: -1 } };
     axios
       .get("https://more-blogs-server.vercel.app/myBlogs", {
         params,
@@ -55,7 +40,7 @@ const MyBlogs = () => {
   }, [loading, user.email]);
 
   return (
-    <main className="space-y-10">
+    <main>
       <Helmet>
         <title>My Blogs | MORE BLOGS</title>
       </Helmet>
@@ -69,7 +54,7 @@ const MyBlogs = () => {
       ) : (
         <>
           {notFound ? (
-            <div className=" grid justify-items-center gap-3 pb-10">
+            <div className=" grid justify-items-center gap-3 py-10">
               <img
                 src={"./notFound.svg"}
                 alt={`not available`}
@@ -80,7 +65,7 @@ const MyBlogs = () => {
               </h3>
             </div>
           ) : (
-            <section className="pb-10">
+            <section className="py-20">
               <div className="container space-y-6">
                 <h5 className="text-custom-primary">
                   Total blogs:{blogs.length}

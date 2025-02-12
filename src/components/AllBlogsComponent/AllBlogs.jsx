@@ -6,7 +6,7 @@ const AllBlogs = () => {
     const headerTitle="MoreBlogs"
     const headerSubtext="Creative, Fashion, Lifestyle, Nature & Travel"
     return (
-        <main className='space-y-10'>
+        <main>
             <Helmet>
                 <title>All Blogs | MORE BLOGS</title>
             </Helmet>

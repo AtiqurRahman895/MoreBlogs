@@ -13,7 +13,7 @@ const RecentBlogCard = ({ blog }) => {
         <h6 className="text-custom-primary font-bold text-center text-sm">
           - {blog.category} -
         </h6>
-        <h4 className="text-center px-4 font-Cinzel font-normal">
+        <h4 className="text-center font-Cinzel font-normal">
           {blog.title}
         </h4>
         <p className="mt-2 first-letter:text-custom-primary first-letter:text-3xl first-letter:font-Cinzel">

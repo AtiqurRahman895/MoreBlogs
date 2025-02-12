@@ -60,7 +60,7 @@ const Wishlist = () => {
   }, [loading, user.email]);
 
   return (
-    <main className="space-y-10">
+    <main>
       <Helmet>
         <title>Wishlist | MORE BLOGS</title>
       </Helmet>
@@ -74,7 +74,7 @@ const Wishlist = () => {
       ) : (
         <>
           {notFound ? (
-            <div className=" grid justify-items-center gap-3 pb-10">
+            <div className=" grid justify-items-center gap-3 py-10">
               <img
                 src={"./notFound.svg"}
                 alt={`not available`}
@@ -85,7 +85,7 @@ const Wishlist = () => {
               </h3>
             </div>
           ) : (
-            <section className="pb-10">
+            <section className="py-20">
               <div className="container space-y-6">
                 <h5 className="text-custom-primary">
                   Total blogs:{blogs.length}

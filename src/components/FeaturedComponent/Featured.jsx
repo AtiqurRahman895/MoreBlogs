@@ -42,7 +42,7 @@ const Featured = () => {
   };
 
   return (
-    <main className="space-y-10">
+    <main>
       <Helmet>
         <title>Featured | MORE BLOGS</title>
       </Helmet>
@@ -56,7 +56,7 @@ const Featured = () => {
       ) : (
         <>
           {notFound ? (
-            <div className=" grid justify-items-center gap-3 pb-10">
+            <div className=" grid justify-items-center gap-3 py-10">
               <img
                 src={"./notFound.svg"}
                 alt={`not available`}
@@ -67,7 +67,7 @@ const Featured = () => {
               </h3>
             </div>
           ) : (
-            <section className="pb-10">
+            <section className="py-20">
               <div className="container space-y-6">
                 {/* <h5 className="text-custom-primary">Total blogs:{blogs.length}</h5> */}
                 <div className="max-h-[65svh] overflow-x-auto">
