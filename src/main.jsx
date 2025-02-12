@@ -23,6 +23,7 @@ import axios from "axios";
 import Home from "./components/HomeComponent/Home";
 import Featured from "./components/FeaturedComponent/Featured";
 import Wishlist from "./components/WishListComponent/Wishlist";
+import MyBlogs from "./components/MyBlogsComponent/MyBlogs";
 
 const router = createBrowserRouter([
   {
@@ -80,6 +81,14 @@ const router = createBrowserRouter([
         element: (
           <PrivateRoute>
             <Wishlist />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/my_blogs",
+        element: (
+          <PrivateRoute>
+            <MyBlogs />
           </PrivateRoute>
         ),
       },

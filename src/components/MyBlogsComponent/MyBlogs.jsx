@@ -8,7 +8,7 @@ import { AuthContext } from "../../Provider/AuthProvider";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
-const Wishlist = () => {
+const MyBlogs = () => {
   const navigate = useNavigate();
 
   const { user, logoutUser } = useContext(AuthContext);
@@ -16,8 +16,8 @@ const Wishlist = () => {
   const [notFound, setNotFound] = useState(false);
   const [blogs, setBlogs] = useState([]);
 
-  const headerTitle = "Wishlist";
-  const headerSubtext = "Keep track of the games you want to play";
+  const headerTitle = "Your Blogs";
+  const headerSubtext = "All the blogs you added in one place";
 
   //   useEffect(() => {
   //     if (user) {
@@ -32,9 +32,9 @@ const Wishlist = () => {
   //   }, [user, blogInfo, navigate]);
 
   useEffect(() => {
-    const params = { query: { user_email: user.email }, sort: { _id: -1 } };
+    const params = { author_email: user.email, sort: { _id: -1 } };
     axios
-      .get("https://more-blogs-server.vercel.app/wishlist", {
+      .get("https://more-blogs-server.vercel.app/myBlogs", {
         params,
         withCredentials: true,
       })
@@ -47,12 +47,7 @@ const Wishlist = () => {
         }
       })
       .catch((error) => {
-        if (error.status === 401 || error.status === 403) {
-          logoutUser();
-          toast.error(error.response.data.message);
-          navigate("/login");
-        }
-        console.error("Error finding wishlist blogs:", error);
+        console.error("Error finding Your blogs:", error);
       })
       .finally(() => {
         setLoading(false);
@@ -62,7 +57,7 @@ const Wishlist = () => {
   return (
     <main className="space-y-10">
       <Helmet>
-        <title>Wishlist | MORE BLOGS</title>
+        <title>My Blogs | MORE BLOGS</title>
       </Helmet>
       <HomeHeroSection
         headerTitle={headerTitle}
@@ -81,7 +76,7 @@ const Wishlist = () => {
                 className="w-[200px]"
               />
               <h3 className="font-extrabold text-center text-custom-primary">
-                You have not added any blogs to your wishlist yet!
+                You have not added any blogs yet!
               </h3>
             </div>
           ) : (
@@ -108,4 +103,6 @@ const Wishlist = () => {
   );
 };
 
-export default Wishlist;
+export default MyBlogs;
+
+
