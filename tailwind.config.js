@@ -28,9 +28,9 @@ export default {
       colors: {
         'custom-primary': '#d5ae6b',
         'custom-half-primary': 'rgba(213, 174, 107, 0.2)',
-        // 'black':'#1e1e1e',
-        // 'black-font':'#797979',
-        'custom-ash': '#f0f0f0',
+        // 'white':'#1e1e1e',
+        // 'black':'#f0f0f0',
+
       },
     },
   },

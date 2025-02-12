@@ -80,7 +80,7 @@ const BlogCommentSection = ({ blog_id, author_email, user }) => {
   };
 
   return (
-    <section className="space-y-6">
+    <section className="space-y-6 pb-20">
       {user?.email !== author_email && (
         <form onSubmit={handleCommentSubmin} className="container space-y-4">
           <div className="form-control w-full">

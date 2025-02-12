@@ -19,7 +19,7 @@ const TitleInputSection = ({title,setTitle}) => {
                         />
                     </div>
                     <label htmlFor="title" className="input-label label py-0 gap-2 items-center [&_svg]:hover:animate-none [&_svg]:animate-pulse">
-                        <h3 className='text-black font-Cinzel font-normal'>
+                        <h3 className='dark:text-white text-black font-Cinzel font-normal'>
                             {title?title:"Blog Title?"}
                             <MdRateReview className='text-custom-primary text-xl ![animation-duration:1.5s] inline ml-2' />
                         </h3>

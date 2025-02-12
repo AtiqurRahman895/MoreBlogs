@@ -40,7 +40,7 @@ const BlogsSection = () => {
   }, [searchQuery]);
 
   return (
-    <section className="mb-10">
+    <section className="pb-20">
       <div className="container space-y-10">
         <TopScrollBar blogCount={blogs.length} />
 

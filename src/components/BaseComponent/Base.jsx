@@ -6,7 +6,9 @@ import Footer from "./Footer";
 import Header from "./Header";
 import { useState } from "react";
 import { TransferLists } from "../../Contexts/TransferLists";
-import NavSideBar from "./NavSidebar";
+import ThemeToggler from "./ThemeToggler";
+import NavSideBar from "./NavSideBar";
+
 const Base = () => {
 
   const [users, setUsers] = useState([]);
@@ -29,7 +31,9 @@ const Base = () => {
             {/* Page content here */}
             <Outlet />
             <Footer />
-            
+            <section className="fixed bottom-[10%] right-4 z-50">
+              <ThemeToggler/>
+            </section>
           </NavSideBar>
 
       </TransferLists.Provider>

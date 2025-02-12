@@ -66,7 +66,7 @@ const TopScrollBar = ({ blogCount }) => {
                 <button
                     key={index}
                     onClick={() => setSearchQuery(categoryName)}
-                    className={`bg-gray-200 hover:bg-gray-200 hover:scale-105 text-sm cursor-pointer px-4 py-[.56rem] duration-500 rounded-sm border-none text-inherit flex-shrink-0`}
+                    className={`bg-gray-200 !text-black hover:bg-gray-200 hover:scale-105 text-sm cursor-pointer px-4 py-[.56rem] duration-500 rounded-sm border-none text-inherit flex-shrink-0`}
                 >
                     {categoryName}
                 </button>

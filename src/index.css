@@ -40,7 +40,7 @@
     @apply scroll-smooth;
   }
   body {
-    @apply text-black text-[14px] bg-white overflow-x-hidden font-manrope font-medium;
+    @apply dark:text-white text-black text-[14px] dark:bg-black bg-white overflow-x-hidden font-manrope font-medium;
   }
   /* p,
   span,

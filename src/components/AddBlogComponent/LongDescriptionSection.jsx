@@ -17,7 +17,7 @@ const LongDescriptionSection = ({
   const customToolbar = [
     [{ header: [4, 5, 6, false] }],
     ["bold", "italic", "underline", "strike"],
-    [{ color: ["#d5ae6b", "#000000"] }],
+    [{ color: ["#d5ae6b"] }],
     [{ list: "ordered" }, { list: "bullet" }],
     // [{ align: [] }],
     // ["link"],
@@ -56,7 +56,7 @@ const LongDescriptionSection = ({
       ALLOWED_CSS: {
         properties: ["color"],
         allowedValues: {
-          color: ["#000000", "#d5ae6b"],
+          color: [ "#d5ae6b" ],
         },
       },
       FORBID_CSS: {
@@ -88,7 +88,7 @@ const LongDescriptionSection = ({
               id="long_description"
               name="long_description"
               modules={modules}
-              className="h-60"
+              className="h-60 [&_.ql-toolbar.ql-snow]:!bg-custom-primary [&_.ql-editor.ql-blank::before]:!text-custom-primary"
               theme="snow"
             />
             <input
@@ -105,7 +105,7 @@ const LongDescriptionSection = ({
           >
             <div className="">
               <MdRateReview className="text-custom-primary text-xl ![animation-duration:1.5s] inline mr-2" />
-              {good_long_description && word_count > 1 ? (
+              {good_long_description && word_count > 0 ? (
                 <>
                   <p className="inline">Long Description: {word_count} words</p>
                   <div

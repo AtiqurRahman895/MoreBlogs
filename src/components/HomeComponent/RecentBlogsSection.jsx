@@ -41,7 +41,7 @@ const RecentBlogsSection = () => {
   }, []);
 
   return (
-    <section className="pb-16 text-white bg-cover bg-no-repeat bg-center">
+    <section className="pb-20 text-white bg-cover bg-no-repeat bg-center">
       <div className="container space-y-12">
         <div className="text-center font-bold">
           <h3 className="text-custom-primary">Recent Blogs</h3>
@@ -63,7 +63,7 @@ const RecentBlogsSection = () => {
                 </h3>
               </div>
             ) : (
-              <Masonry columnsCount={columnsCount} className="!gap-4 md:!gap-6">
+              <Masonry columnsCount={columnsCount} gutter="24px">
                 {recentBlogs.map((blog, index) => (
                   <RecentBlogCard key={index} blog={blog} />
                 ))}

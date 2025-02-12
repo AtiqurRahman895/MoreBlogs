@@ -56,7 +56,7 @@ const Header = () => {
             
             <Link 
               to={"/"}
-              className={`btn btn-ghost hover:bg-transparent font-Sancreek text-2xl text-custom-primary hover:text-black uppercase`}>
+              className={`btn btn-ghost hover:bg-transparent font-Sancreek text-2xl text-custom-primary uppercase`}>
               {/* <img src={logo} alt="Discount Pro" className="w-[100px]"/> */}
               More Blogs
             </Link>

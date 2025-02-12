@@ -92,7 +92,7 @@ const TopBlogs = () => {
     pauseOnHover: true,
   };
   return (
-    <section className="pt-4 pb-16">
+    <section className="pt-4 pb-20">
       <div className="container space-y-4">
         <div className="text-center text-custom-primary">
           <h5 className="font-bold">Top Blogs</h5>

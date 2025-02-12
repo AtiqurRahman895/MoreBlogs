@@ -3,13 +3,13 @@ import ReadThisBlogButton from "../CommonComponent/ReadThisBlogButton";
 
 const RecentBlogCard = ({ blog }) => {
   return (
-    <div className="space-y-5 text-black mb-10">
+    <div className="text-black dark:text-white border border-custom-primary">
       <img
         src={blog.image}
         alt={blog.title}
         className="w-full aspect-[3/2] object-cover object-center"
       />
-      <div className="">
+      <div className="p-4">
         <h6 className="text-custom-primary font-bold text-center text-sm">
           - {blog.category} -
         </h6>

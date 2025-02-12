@@ -68,7 +68,7 @@ const AllCategoriesSection = () => {
   };
 
   return (
-    <section className="pb-16 mb-6 bg-white">
+    <section className="pb-20">
       <div className="container space-y-12">
         <div className="text-center font-bold">
           <h3 className="text-custom-primary">All Categories</h3>
