@@ -4,6 +4,9 @@ A modern blogging platform where users can create, update, and explore various b
 
 ![MoreBlogs Screenshot](https://i.ibb.co.com/MzSJ9GC/project-Image3.jpg) 
 
+## Backend Repository  
+🔗 [MoreBlogs-server](https://github.com/AtiqurRahman895/MoreBlogs-server)  
+
 ## 🚀 Live Project  
 🔗 [MoreBlogs Live](https://more-blogs-atiq.web.app)  
 
