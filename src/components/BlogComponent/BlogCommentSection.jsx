@@ -89,7 +89,7 @@ const BlogCommentSection = ({ blog_id, author_email, user }) => {
               name="ReaderComment"
               id="ReaderComment"
               minLength={3}
-              className="textarea textarea-ghost textarea-bordered h-24 !outline-none !border-gray-300 rounded-sm"
+              className="textarea textarea-ghost textarea-bordered min-h-32 !outline-none !border-gray-300 rounded-sm"
               required
             />
           </div>

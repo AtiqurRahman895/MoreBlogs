@@ -34,7 +34,7 @@ const WhyUsSection = () => {
             <h3 className="text-custom-primary">Why Choose Us?</h3>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-4 gap-x-6 gap-y-10">
                     {reasonList.map((reason, index) => (
                     <div
                         key={index}

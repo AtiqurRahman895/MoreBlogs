@@ -33,12 +33,10 @@ const Login = () => {
       });
   };
 
-  const LoginOnSubmit = (e) => {
+  const handleLogin = (e, email, password) => {
     e.preventDefault();
-    const email = e.target.email.value;
-    const password = e.target.password.value;
 
-    loginUser(email, password)
+    loginUser(email||e.target.email.value, password||e.target.password.value)
       .then((userCredential) => {
         setUser(userCredential.user);
         e.target.reset();
@@ -51,12 +49,13 @@ const Login = () => {
         toast.error(error.message ? error.message : error.code);
       });
   };
+  
   return (
     <section>
       <div className="container hero flex items-center justify-center">
         <div className="fromWrapper max-w-sm">
           <h1 className="text-5xl font-bold">Login now!</h1>
-          <form onSubmit={LoginOnSubmit} className="card-body p-0">
+          <form onSubmit={handleLogin} className="card-body p-0">
             <div className="form-control">
               <label htmlFor="email" className="label">
                 <span className="">Email</span>
@@ -105,10 +104,16 @@ const Login = () => {
               </Link>
             </div>
 
-            <div className="mt-6">
+            <div className="mt-6 space-y-2">
               <button className="formSubmitBtn">Login</button>
+              <button
+                onClick={()=>handleLogin("atiqemon98@gmail.com","1aA@1a")}
+                className="formSubmitBtn"
+              >
+                Quick Access For Recruiter
+              </button>
             </div>
-            <span className="text-center mt-4">
+            <span className="text-center mt-2">
               Do not have an account?{" "}
               <Link
                 to={"/register"}

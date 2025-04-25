@@ -16,8 +16,8 @@ const NextPreButtons = ({limit,totalContents}) => {
   }
   const handleNextButton=()=>{
     navigate(`?sort=${sort}&searchQuery=${searchQuery}&page=${pageNo+1}`);
-
   }
+
   useEffect(() => {
     const timer = setTimeout(() => {
       // pageRef.current.scrollTo(0, 0);
