@@ -6,6 +6,7 @@ import UpdateBlogButton from "../CommonComponent/UpdateBlogButton";
 import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import Loading from "../AuthenticationComponent/Loading";
+import DeleteBlogButton from "../CommonComponent/DeleteBlogButton";
 
 const Blog = () => {
   const blogInfo = useLoaderData();
@@ -53,11 +54,19 @@ const Blog = () => {
               </div>
               <div className="mt-4 flex items-center justify-center gap-3">
                 {user?.email === author_email && (
-                  <UpdateBlogButton
-                    _id={_id}
-                    buttonClass={"p-1.5"}
-                    iconClass={"text-lg"}
-                  />
+                  <>
+                    <UpdateBlogButton
+                      _id={_id}
+                      buttonClass={"p-1.5"}
+                      iconClass={"text-lg"}
+                    />
+
+                    <DeleteBlogButton
+                      _id={_id}
+                      buttonClass={"p-1.5"}
+                      iconClass={"text-lg"}
+                    />
+                  </>
                 )}
                 <AddToWishlistButton
                   _id={_id}

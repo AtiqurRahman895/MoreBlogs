@@ -2,11 +2,12 @@ import ReadThisBlogButton from "../CommonComponent/ReadThisBlogButton";
 import AddToWishlistButton from "../CommonComponent/AddToWishlistButton";
 import DeleteFromWishlistButton from "../CommonComponent/DeleteFromWishlistButton";
 import { useLocation } from "react-router-dom";
+import DeleteBlogButton from "../CommonComponent/DeleteBlogButton";
 
 const TopBlogCard = ({ blog,setLoading }) => {
     const location= useLocation() 
     const path= location.pathname
-    console.log(path==="/wishlist")
+
   return (
     <div className="bg-black">
       <div
@@ -37,6 +38,14 @@ const TopBlogCard = ({ blog,setLoading }) => {
             {
               path==="/wishlist" &&
               <DeleteFromWishlistButton
+              _id={blog._id} setLoading={setLoading}
+              buttonClass={"p-2"}
+              iconClass={"text-2xl"}
+              />
+            }
+            {
+              path==="/my_blogs" &&
+              <DeleteBlogButton
               _id={blog._id} setLoading={setLoading}
               buttonClass={"p-2"}
               iconClass={"text-2xl"}

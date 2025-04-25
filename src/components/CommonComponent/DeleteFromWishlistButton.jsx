@@ -38,12 +38,12 @@ const DeleteFromWishlistButton = ({
       <button
         onClick={handleDeleteFromWishlistButton}
         type="Button"
-        className={`AddToWishlistButton primaryButton2 activePrimaryButton2 ${buttonClass}`}
+        className={`DeleteFromWishlistButton primaryButton2 activePrimaryButton2 ${buttonClass}`}
       >
         <MdOutlineDeleteOutline className={`${iconClass}`} />
       </button>
       <Tooltip
-        anchorSelect=".AddToWishlistButton"
+        anchorSelect=".DeleteFromWishlistButton"
         className="!bg-custom-primary"
       >
         Delete this blog from wishlist!
